@@ -67,39 +67,48 @@ function App() {
   };
 
   const handleAnalyze = async () => {
-    if (!file) {
-      setErrorMessage("⚠ Please select a valid audio file!");
-      setResult(null);
-      return;
-    }
-
-    setLoading(true);
+  if (!file) {
+    setErrorMessage("⚠ Please select a valid audio file!");
     setResult(null);
-    setErrorMessage("");
+    return;
+  }
 
-    const formData = new FormData();
-    formData.append("file", file);
+  setLoading(true);
+  setResult(null);
+  setErrorMessage("");
 
-    try {
-      const response = await fetch("http://127.0.0.1:5000/analyze", {
-        method: "POST",
-        body: formData,
-      });
+  const formData = new FormData();
+  formData.append("file", file);
 
-      const data = await response.json();
-      setLoading(false);
+  try {
+    const response = await fetch("http://127.0.0.1:5000/predict", {
+      method: "POST",
+      body: formData,
+    });
 
-      if (data.error) {
-        setErrorMessage("⚠ Error analyzing audio: " + data.error);
-      } else {
-        setResult(data);
-      }
-    } catch (err) {
-      console.error(err);
-      setLoading(false);
-      setErrorMessage("⚠ Server error while analyzing audio.");
+    // 🔥 IMPORTANT FIX
+    if (!response.ok) {
+      throw new Error("Server response not OK");
     }
-  };
+
+    const data = await response.json();
+
+    console.log("✅ Backend Response:", data); // DEBUG
+
+    setLoading(false);
+
+    if (data.error) {
+      setErrorMessage("⚠ " + data.error);
+    } else {
+      setResult(data);
+    }
+
+  } catch (err) {
+    console.error("❌ Fetch error:", err);
+    setLoading(false);
+    setErrorMessage("⚠ Server connection error.");
+  }
+};
 
   return (
     <div className="App">
