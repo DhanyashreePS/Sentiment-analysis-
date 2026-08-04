@@ -109,19 +109,19 @@ A Deep Neural Network (DNN) is trained using TensorFlow/Keras to classify emotio
 
 ---
 ## Snapshots
-- Before Audio Upload
+### Before Audio Upload
   
 <img width="756" height="484" alt="Screenshot 2025-11-17 122713" src="https://github.com/user-attachments/assets/8126b97d-fdaa-4495-a41e-4b518f37a835" />
 
-- After Audio Upload
+### After Audio Upload
   
 <img width="760" height="593" alt="Screenshot 2025-11-17 122801" src="https://github.com/user-attachments/assets/4b47eb9e-f8b9-4de1-ba3e-5faf036be04c" />
 
-- Invalid Audio Upload
+### Invalid Audio Upload
 
 <img width="762" height="571" alt="Screenshot 2025-11-17 131308" src="https://github.com/user-attachments/assets/50a8f486-65e2-4fa5-a6f3-63208fd28aaa" />
 
-- Analysis result for Audios (different emotion)
+### Analysis result for Audios (different emotion)
 
 <img width="776" height="772" alt="Screenshot 2025-11-16 155508" src="https://github.com/user-attachments/assets/a4fff6bb-347d-4b62-b945-28297ce74eb0" />
 
