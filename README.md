@@ -1,70 +1,250 @@
-# Getting Started with Create React App
+# 🎧 Audio Sentiment & Emotion Analysis System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📖 Overview
 
-## Available Scripts
+The Audio Sentiment & Emotion Analysis System is an AI-powered web application that analyzes emotions from speech audio. Users can upload a speech audio file, and the system predicts the speaker's emotion using a deep learning model. It also converts speech into text and displays the transcription along with the detected emotion.
 
-In the project directory, you can run:
+This project combines Machine Learning, Speech Processing, and Full-Stack Web Development to provide an interactive and intelligent emotion recognition system.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Upload speech audio files (.wav)
+- Automatic emotion detection
+- Speech-to-text transcription
+- Displays predicted emotion and sentiment
+- Interactive React-based user interface
+- RESTful API built with Flask
+- Deep learning-based emotion classification
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technologies Used
 
-### `npm run build`
+### Frontend
+- React.js
+- HTML5
+- CSS3
+- JavaScript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+- Python
+- Flask
+- Flask-CORS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Machine Learning
+- TensorFlow / Keras
+- Scikit-learn
+- NumPy
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Audio Processing
+- Librosa
+- SpeechRecognition
 
-### `npm run eject`
+### Dataset
+- Toronto Emotional Speech Set (TESS)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+sentiment-project/
+│
+├── backend/
+│   ├── dataset/
+│   │   └── AudioWAV/
+│   ├── app.py
+│   ├── train.py
+│   ├── emotion_model.h5
+│   ├── scaler.pkl
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── assets/
+│   ├── package.json
+│   └── node_modules/
+│
+└── README.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚙️ System Workflow
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. User uploads a speech audio (.wav) file.
+2. Flask backend receives the uploaded audio.
+3. Librosa extracts MFCC features from the audio.
+4. The trained TensorFlow model predicts the emotion.
+5. SpeechRecognition converts speech into text.
+6. Backend sends the emotion, sentiment, and transcription to the frontend.
+7. React displays the prediction results.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🧠 Machine Learning Workflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Dataset
+The model is trained using the Toronto Emotional Speech Set (TESS) dataset.
 
-### Analyzing the Bundle Size
+### Feature Extraction
+The audio is processed using Mel-Frequency Cepstral Coefficients (MFCC), which convert speech into meaningful numerical features.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Model
+A Deep Neural Network (DNN) is trained using TensorFlow/Keras to classify emotions from extracted features.
 
-### Making a Progressive Web App
+### Predicted Emotions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Happy 😊
+- Sad 😢
+- Angry 😡
+- Fear 😨
+- Disgust 🤢
+- Neutral 😐
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ▶️ Installation
 
-### Deployment
+### Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+git clone https://github.com/yourusername/audio-sentiment-analysis.git
+```
 
-### `npm run build` fails to minify
+### Create Virtual Environment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+python -m venv venv
+```
+
+### Activate Virtual Environment (Windows)
+
+```bash
+venv\Scripts\activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
+
+```bash
+pip install tensorflow flask flask-cors librosa numpy scikit-learn SpeechRecognition
+```
+
+---
+
+## ▶️ Train the Model
+
+```bash
+python train.py
+```
+
+This generates the trained model:
+
+```
+emotion_model.h5
+```
+
+---
+
+## ▶️ Run the Backend
+
+```bash
+python app.py
+```
+
+Backend URL:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## ▶️ Run the Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Frontend URL:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📥 Input
+
+- Speech Audio (.wav)
+
+## 📤 Output
+
+- Speech Transcription
+- Predicted Emotion
+- Predicted Sentiment
+
+---
+
+## 🌍 Real-World Applications
+
+- Customer Support Call Analysis
+- Mental Health Monitoring
+- Virtual Voice Assistants
+- Online Interview Analysis
+- Human-Computer Interaction
+- E-learning Platforms
+- Smart Call Centers
+
+---
+
+## ⚠️ Challenges Faced
+
+- Handling different audio formats
+- Improving prediction accuracy
+- Audio feature extraction
+- Frontend and backend integration
+- Speech-to-text implementation
+
+---
+
+## 🔮 Future Enhancements
+
+- Real-time microphone support
+- CNN/LSTM-based emotion recognition
+- Noise reduction techniques
+- Multilingual speech recognition
+- Cloud deployment
+- Transformer-based speech models
+- Advanced sentiment analysis using NLP
+
+---
+
+## 📌 Conclusion
+
+The Audio Sentiment & Emotion Analysis System demonstrates how Artificial Intelligence and Speech Processing can be combined to recognize emotions from human speech. By integrating audio feature extraction, deep learning, speech-to-text, and a responsive web interface, the system provides an efficient solution for emotion recognition with applications in healthcare, customer service, education, and intelligent virtual assistants.
+
+---
+
+## 👩‍💻 Author
+
+**DHANYASHREE P S**
+
+---
+
+## 📄 License
+
+This project is developed for academic and educational purposes. It can be modified and extended for learning and research.
