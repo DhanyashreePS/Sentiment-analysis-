@@ -1,4 +1,4 @@
-# 🎧 Audio Sentiment & Emotion Analysis System
+# 🎧 Sentiment Analysis System using Audio
 
 ## 📖 Overview
 
@@ -108,6 +108,23 @@ A Deep Neural Network (DNN) is trained using TensorFlow/Keras to classify emotio
 - Neutral 😐
 
 ---
+## Snapshots
+- Before Audio Upload
+  <img width="756" height="484" alt="Screenshot 2025-11-17 122713" src="https://github.com/user-attachments/assets/8126b97d-fdaa-4495-a41e-4b518f37a835" />
+
+- After Audio Upload
+  <img width="760" height="593" alt="Screenshot 2025-11-17 122801" src="https://github.com/user-attachments/assets/4b47eb9e-f8b9-4de1-ba3e-5faf036be04c" />
+
+- Invalid Audio Upload
+  <img width="762" height="571" alt="Screenshot 2025-11-17 131308" src="https://github.com/user-attachments/assets/50a8f486-65e2-4fa5-a6f3-63208fd28aaa" />
+
+- Analysis result for Audios (different emotion)
+  <img width="776" height="772" alt="Screenshot 2025-11-16 155508" src="https://github.com/user-attachments/assets/a4fff6bb-347d-4b62-b945-28297ce74eb0" />
+
+  <img width="763" height="781" alt="Screenshot 2025-11-16 155440" src="https://github.com/user-attachments/assets/ca37e176-ed68-44c8-8169-49c5c3f12efc" />
+
+  <img width="767" height="759" alt="Screenshot 2025-11-16 155126" src="https://github.com/user-attachments/assets/b7c41b2a-bcbb-4059-a41d-a75f2d8f926c" />
+
 
 ## ▶️ Installation
 
