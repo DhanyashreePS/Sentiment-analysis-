@@ -8,7 +8,7 @@ This project combines Machine Learning, Speech Processing, and Full-Stack Web De
 
 ---
 
-## 🚀 Features
+## Features
 
 - Upload speech audio files (.wav)
 - Automatic emotion detection
@@ -20,7 +20,7 @@ This project combines Machine Learning, Speech Processing, and Full-Stack Web De
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Frontend
 - React.js
@@ -75,7 +75,7 @@ sentiment-project/
 
 ---
 
-## ⚙️ System Workflow
+## System Workflow
 
 1. User uploads a speech audio (.wav) file.
 2. Flask backend receives the uploaded audio.
@@ -87,7 +87,7 @@ sentiment-project/
 
 ---
 
-## 🧠 Machine Learning Workflow
+## Machine Learning Workflow
 
 ### Dataset
 The model is trained using the Toronto Emotional Speech Set (TESS) dataset.
@@ -130,12 +130,12 @@ A Deep Neural Network (DNN) is trained using TensorFlow/Keras to classify emotio
 <img width="767" height="759" alt="Screenshot 2025-11-16 155126" src="https://github.com/user-attachments/assets/b7c41b2a-bcbb-4059-a41d-a75f2d8f926c" />
 
 
-## ▶️ Installation
+## Installation
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/audio-sentiment-analysis.git
+git clone https://github.com/DhanyashreePS/audio-sentiment-analysis.git
 ```
 
 ### Create Virtual Environment
@@ -220,7 +220,7 @@ http://localhost:3000
 
 ---
 
-## 🌍 Real-World Applications
+## Real-World Applications
 
 - Customer Support Call Analysis
 - Mental Health Monitoring
@@ -232,7 +232,7 @@ http://localhost:3000
 
 ---
 
-## ⚠️ Challenges Faced
+## Challenges Faced
 
 - Handling different audio formats
 - Improving prediction accuracy
@@ -242,7 +242,7 @@ http://localhost:3000
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Real-time microphone support
 - CNN/LSTM-based emotion recognition
@@ -254,7 +254,7 @@ http://localhost:3000
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 The Audio Sentiment & Emotion Analysis System demonstrates how Artificial Intelligence and Speech Processing can be combined to recognize emotions from human speech. By integrating audio feature extraction, deep learning, speech-to-text, and a responsive web interface, the system provides an efficient solution for emotion recognition with applications in healthcare, customer service, education, and intelligent virtual assistants.
 
