@@ -164,7 +164,7 @@ pip install tensorflow flask flask-cors librosa numpy scikit-learn SpeechRecogni
 
 ---
 
-## ▶️ Train the Model
+## Train the Model
 
 ```bash
 python train.py
@@ -178,7 +178,7 @@ emotion_model.h5
 
 ---
 
-## ▶️ Run the Backend
+## Run the Backend
 
 ```bash
 python app.py
@@ -192,7 +192,7 @@ http://127.0.0.1:5000
 
 ---
 
-## ▶️ Run the Frontend
+## Run the Frontend
 
 ```bash
 cd frontend
@@ -208,11 +208,11 @@ http://localhost:3000
 
 ---
 
-## 📥 Input
+## Input
 
 - Speech Audio (.wav)
 
-## 📤 Output
+## Output
 
 - Speech Transcription
 - Predicted Emotion
@@ -260,12 +260,15 @@ The Audio Sentiment & Emotion Analysis System demonstrates how Artificial Intell
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **DHANYASHREE P S**
+**Ankitha Prabhu**
+**Ankitha**
+**Bhavana**
 
 ---
 
-## 📄 License
+## License
 
 This project is developed for academic and educational purposes. It can be modified and extended for learning and research.
